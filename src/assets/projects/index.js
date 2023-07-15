@@ -1,5 +1,5 @@
-import florave_image from "./images/florave_image.jpg";
-import forgetmenot_image from "./images/forgetmenot_image.jpg";
+import florave_image from "./images/florave_image.png";
+import forgetmenot_image from "./images/forgetmenot_image.png";
 import narcissus_image from "./images/narcissus_image.jpg";
 import membound_image from "./images/membound_image.jpg";
 import florave_demo from "./videos/florave_demo.mov";
