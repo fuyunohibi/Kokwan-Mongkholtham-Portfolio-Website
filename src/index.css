@@ -1,0 +1,275 @@
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Vanilla Ravioli';
+    src: url('./assets/fonts/VanillaRavioli_Demo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HolidayMDJP05';
+    src: url('./assets/fonts/HolidayMDJP05.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RiiTegakiFude';
+    src: url('./assets/fonts/RiiT_F_old.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+} 
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.bg-primary-opacity-90-percent {
+  background-color: rgba(13, 70, 40, 0.9); /* Your primary color with 90% opacity */
+}
+
+
+.pencil-style {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #ccc, #0d4628, #ccc);
+}
+
+.pencil-style-white {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #ffffff, #e7f8ef, #fffbfb);
+}
+
+.pencil-style-left-to-right {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #0d4628, #7f8c8d, #ccc);
+}
+
+.pencil-style-right-to-left {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to left, #0d4628, #7f8c8d, #ccc);
+}
+
+.white-pencil-style-left-to-right {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #ffff, #cccccc, #928e8e);
+}
+
+.white-pencil-style-right-to-left {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to left, #ffff, #cccccc, #928e8e);
+}
+
+
+
+
+
+.glass-navbar {
+   background: radial-gradient(189.47% 125.36% at 2.01% 39.74%, rgba(85, 99, 88, 0.20) 0%, rgba(110, 191, 244, 0.04) 77.08%, rgba(70, 144, 212, 0.00) 100%);
+   backdrop-filter: blur(40px);
+}
+
+
+.glass-panel {
+  color: #fff;
+  margin: 40px auto;
+  background-color: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  width: 100%;
+  border-radius: 15px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+}
+
+/* Coinflip like Animation */
+@keyframes spinY {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(1turn); }
+}
+
+.spinY:hover {
+  animation: spinY 1s linear infinite;
+}
+
+.react-multi-carousel-list{
+  position: unset !important;
+}
+
+/* Custom Hover For Navbar */
+
+.customHover {
+  position: relative;
+}
+
+.customHover::after {
+  content: '';
+  position: absolute;
+  height: 2.5px;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  background-color: #01AF24;
+  transform: scaleX(0);
+  transform-origin: left top;
+  transition: transform 0.25s cubic-bezier(0.2, 0.65, 0.3, 0.9) 0s;
+}
+
+.customHover:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Text Animation */
+
+
+@keyframes float {
+  0% { transform: translatey(0px); }
+  50% { transform: translatey(-10px); }
+  100% { transform: translatey(0px); }
+}
+
+.ghibli-float-text {
+  animation: float 3s ease-in-out;
+}
+
+@keyframes typewriter {
+  0% { width: 0; opacity: 1; } /* Transition opacity to 1 when the animation starts */
+  100% { width: 100%; }
+}
+
+@keyframes typewriter-border {
+  0% { width: 0; opacity: 1; }
+  50% { border-right: .15em solid #0d4628; } /* border visible during the typing */
+  100% { width: 100%; border-right: none; } /* border disappears when typing is done */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; } /* Initially text is hidden */
+  100% { opacity: 1; } /* Text appears when the animation starts */
+}
+
+.ghibli-typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap; 
+  animation: typewriter 4s steps(30), fadeIn 0s; /* Apply fadeIn animation */
+}
+
+.ghibli-typewriter-text-border {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap; 
+  animation: typewriter-border 4s steps(30), fadeIn 0s; /* Apply fadeIn animation */
+}
+
+.ghibli-typewriter-text-border-delay {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid #0d4628; 
+  white-space: nowrap; 
+  animation: typewriter-border 4s steps(30) 1s, fadeIn 0s 1s; /* Apply fadeIn animation with a delay */
+  opacity: 0; /* Initially text is hidden */
+}
+
+
+/* Liquid Button */
+
+.liquidButton {
+  position: relative;
+  padding: 15px 40px; /* Adjusted size */
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 150px; /* Adjusted size */
+  overflow: hidden;
+  border-radius: 30px; /* Adjusted size to keep the radius proportionate */
+}
+
+.liquidButton span {
+  position: relative;
+  color: #fff;
+  font-size: 15px; /* Adjusted size */
+  font-family: 'RiiTegakiFude', sans-serif;
+  letter-spacing: 6px; /* Adjusted size */
+  z-index: 1;
+}
+
+.liquidButton .liquid {
+  position: absolute;
+  top: -60px; /* Adjusted size */
+  left: 0;
+  width: 150px; /* Adjusted size */
+  height: 150px; /* Adjusted size */
+  background: #01AF24;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+.liquidButton .liquid::after,
+.liquidButton .liquid::before {
+  content: '';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+}
+
+.liquidButton .liquid::before {
+  border-radius: 45%;
+  background: rgba(20, 20, 20, 1);
+  animation: animate 5s linear infinite;
+}
+
+.liquidButton .liquid::after {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, .5);
+  animation: animate 10s linear infinite;
+}
+
+.liquidButton:hover .liquid{
+  top: -90px; /* Adjusted size */
+  background: #03DC2E; /* added this line */
+}
+
+.liquidButton:active .liquid{
+  background: #03DC2E; /* added this line */
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
