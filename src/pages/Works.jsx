@@ -69,9 +69,9 @@ const AnimatedContent = ({ isActive, project }) => (
                 return (
                   <Typewriter 
                     key={developer.name}
-                    text={`${developer.name}${(index === project.developers.length - 1) ? '' : ',ㅤ'}`} 
+                    text={`${developer.name}${(index === project.developers.length - 1) ? '' : ','}`} 
                     delay={0.1} 
-                    className='font-japan-bold text-black-100 text-sm text-center' 
+                    className={`font-japan-bold text-black-100 text-sm text-center ${(index === project.developers.length - 1) ? '' : 'mr-2'}`}
                   />
                 );
               })}
