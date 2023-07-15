@@ -61,7 +61,7 @@ const AnimatedContent = ({ isActive, project }) => (
         </div>
         <div name='developer-container' className='flex-col items-center  space-y-4 mb-5'>
           <div className='flex justify-center'>
-             <Typewriter text={`「Developed by」 |ㅤ`} delay={0.1} className='font-japan-bold text-black-100 text-sm text-center' />
+             <Typewriter text={`「Developed by」 |`} delay={0.1} className='font-japan-bold text-black-100 text-sm text-center mr-3' />
              <Typewriter text={`${project.developed_by}`} delay={0.1} className='font-japan-bold text-black-100 text-sm text-center' />
           </div>
           <div className={`${project.developers ? '' : 'hidden'} flex justify-center`}>
