@@ -45,10 +45,21 @@ const AnimatedContent = ({ isActive, project }) => (
         exit={{ opacity: 0, height: 0 }}
         transition={{ type: 'spring', damping: 20, stiffness: 100 }}
       > 
-        <div name='video-contaienr' className='flex justify-center'>
-          <video src={project.video} alt={project.title} name="work-video" className='mt-10 mb-10 laptop:mb-12 w-[80%] tablet:w-[50%] laptop:w-[40%]' controls/>
+        <div 
+          onClick={(e) => e.stopPropagation()}
+          name='video-contaienr' 
+          className='flex justify-center'
+        >
+          <video 
+            src={project.video} 
+            alt={project.title} 
+            name="work-video" 
+            className='mt-10 mb-10 laptop:mb-12 w-[80%] tablet:w-[50%] laptop:w-[40%]' 
+            controls
+            poster={project.image}
+          />
         </div>
-        <div  name='developer-container' className='flex-col items-center  space-y-4 mb-5'>
+        <div name='developer-container' className='flex-col items-center  space-y-4 mb-5'>
           <div className='flex justify-center'>
              <Typewriter text={`「Developed by」 |ㅤ`} delay={0.1} className='font-japan-bold text-black-100 text-sm text-center' />
              <Typewriter text={`${project.developed_by}`} delay={0.1} className='font-japan-bold text-black-100 text-sm text-center' />
@@ -99,7 +110,7 @@ const WorkCard = ({ project, onClick, isActive }) => {
       <div 
         name='icon-container' 
         className='flex justify-center mt-6 tablet:justify-end tablet:mr-[5%]' 
-        onClick={onClick}
+        onClick={(e) => {e.stopPropagation(); onClick();}}
       >
         <img src={isActive ? up_icon : down_icon} alt={isActive ? 'Up Icon' : 'Down Icon'} className='w-6 h-6 ' />
       </div>

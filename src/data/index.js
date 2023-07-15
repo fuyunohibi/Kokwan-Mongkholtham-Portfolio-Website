@@ -36,11 +36,15 @@ import {
 } from "../assets/images/NAVBAR";
 
 import {
+  florave_image,
+  forgetmenot_image,
+  narcissus_image,
+  membound_image,
   florave_demo,
   forgetmenot_demo,
   narcissus_demo,
   membound_demo,
-} from "../assets/videos";
+} from "../assets/projects";
 
 /* NAVIGATION LINKS */
 export const navLinks = [
@@ -225,6 +229,7 @@ export const projects = [
       },
       
     ],
+    image: narcissus_image,
     video: narcissus_demo,
     source_code_link: "https://github.com/",
   },
@@ -240,6 +245,7 @@ export const projects = [
         name: "react-native",
       },
     ],
+    image: florave_image,
     video: florave_demo,
     source_code_link: "https://github.com/",
   },
@@ -258,6 +264,7 @@ export const projects = [
         name: "redux",
       },
     ],
+    image: forgetmenot_image,
     video: forgetmenot_demo,
     source_code_link: "https://github.com/",
   },
@@ -275,6 +282,7 @@ export const projects = [
         name: 'django',
       },
     ],
+    image: membound_image,
     video: membound_demo,
     source_code_link: "https://github.com/",
   },
