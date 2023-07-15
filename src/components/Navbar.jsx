@@ -38,7 +38,7 @@ const Navbar = ({ activeSection }) => {
     <>
       <nav 
         className='glass-navbar shadow-md p-4 px-8 flex justify-between items-center fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 
-        rounded-[2rem] w-[90vw] h-[3.5rem]
+        rounded-[2rem] w-[90vw] mobile:w-[25rem] h-[3.5rem]
         tablet:w-[30rem] tablet:h-16 laptop:top-0 laptop:bottom-auto laptop:rounded-none laptop:rounded-b-[2rem] laptop:w-screen laptop:h-[4.6rem]'
       >
         <Link
