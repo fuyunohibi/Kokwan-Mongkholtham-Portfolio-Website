@@ -11,7 +11,7 @@ const About = () => {
   return (
    <section 
       id='about-section' 
-      className='relative bg-background overflow-hidden min-h-screen pb-[20%] breakpoint:pb-0' 
+      className='relative bg-background overflow-hidden min-h-screen ' 
     >
       <div name='inner' className='flex flex-col mx-[5%] pb-[8%] pt-[3%] breakpoint:pt-[0%] breakpoint:flex-row'>
         <div name='about_block' className='flex flex-col'>
@@ -45,19 +45,19 @@ const About = () => {
         ) : (
             <div name='image_container' className='w-[100%] mt-16'>
               <div name='top' className='flex relative h-[100%]'>
-                <div name='first_img' className='w-[50%]'>
+                <div name='first_img' className='w-[50%] relative z-10'>
                   <img src={about_image} alt='about_image' className='w-full h-full object-cover' />
                 </div>
-                <div name='quote_block' className='absolute pl-5 pt-5 ml-[39%] mt-[18%] left-0 top-0 bg-primary-opacity-90-percent h-[33%] w-[61%]'>
-                  <Typewriter className='text-white-100 font-japan text-sm' text='Seek out and reach for it!' delay={0.05} />
+                <div name='quote_block' className='absolute pl-5 pt-5  pr-5 ml-[39%] mt-[18%] left-0 top-0 bg-primary-opacity-90-percent h-[33%] w-[61%] z-20 smallMobile:h-[43%] '>
+                  <Typewriter className='text-white-100 font-japan text-sm ' text='Seek out and reach for it!' delay={0.05} />
                 </div>
               </div>
-              <div name='quote_text' className='absolute flex top-0 left-0 flex-row gap-[2%] mt-[113%] tablet:mt-[100%] ml-[10%]'>
-                  <p className='text-accent font-japan text-[1rem]'>A<br/> p<br/>a<br/>r<br/>t<br/> o<br/>f<br/> m<br/>e</p>
-                  <p className='mt-[40%] text-accent font-japan text-[1rem]'>D<br/>i<br/>s<br/>c<br/>o<br/>v<br/>e<br/>r<br/> m<br/>e</p>
+              <div name='quote_text' className='flex items-center ml-[5%] mt-[-60%] relative z-30'>
+                <p className='text-accent font-japan text-[1rem]'>A<br/> p<br/>a<br/>r<br/>t<br/> o<br/>f<br/> m<br/>e</p>
+                <p className='mt-[20%] text-accent font-japan text-[1rem]'>D<br/>i<br/>s<br/>c<br/>o<br/>v<br/>e<br/>r<br/> m<br/>e</p>
               </div>
-
             </div>
+
           )}
       </div>
   

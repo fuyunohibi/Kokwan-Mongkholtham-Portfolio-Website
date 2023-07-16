@@ -58,14 +58,14 @@ const SkillItem = ({ skill }) => (
         transition: { duration: 0.1 },
       }}
       whileTap={{ scale: 0.95 }}
-      className='hover:drop-shadow-md'
+      className='hover:drop-shadow-xl'
     >
       <motion.div 
         name='icon-container'
         className="flex flex-col items-center justify-center w-[100%] mt-10  tablet:p-8 breakpoint:p-6 desktop:p-12 bg-transparent transition-all duration-200 relative"
       >
         <RandomGradientBlock>
-          <div className='w-24 h-24 mobile:w-32 mobile:h-32 flex justify-center items-center spinY'>
+          <div className='w-24 h-24 mobile:w-32 mobile:h-32 smallMobile:w-20 smallMobile:h-20 flex justify-center items-center spinY'>
             <img
               src={skill.icon}
               alt="skill_image"
@@ -74,7 +74,7 @@ const SkillItem = ({ skill }) => (
           </div>
         </RandomGradientBlock>
       </motion.div> 
-      <div name='title-expertise-container' className='flex justify-start relative -top-3 left-[15%] tablet:-top-11 tablet:left-[20%] breakpoint:-top-10 breakpoint:left-[26%] laptop:left-[25%] desktop:-top-16 desktop:left-[28%]'>
+      <div name='title-expertise-container' className='flex justify-start relative -top-3 smallMobile:-top-1 left-[15%] tablet:-top-11 tablet:left-[20%] breakpoint:-top-10 breakpoint:left-[26%] laptop:left-[25%] desktop:-top-16 desktop:left-[28%]'>
         <div name='expertise-container' className='w-2 mr-[0.6rem] mt-[-0.7rem]'>
           <p className="text-gray-500 text-xs font-japan transform rotate-90" >{skill.expertise}</p> 
         </div>

@@ -10,6 +10,7 @@ export default {
         'contact-background': "url('./src/assets/images/CONTACT/my_background.jpg')",
       }),
       screens: {
+        'smallMobile' : { 'max' : '350px' },
         'mobile' : '496px',
         'tablet' : '640px',
         'breakpoint': '767px',
