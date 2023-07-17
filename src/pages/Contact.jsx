@@ -43,7 +43,7 @@ const Contact = () => {
                   <img src={spotify} alt='Spotify' className='w-4 h-4 inline-block mr-2' />
                   Spotify
                 </a>
-                <a href='https://th.linkedin.com/in/kokwan-mongkholtham/' target='_blank' className='text-white-100 font-japan mb-1 ml-2'>
+                <a href='https://www.linkedin.com/in/ko-kwan-mongkholtham-8588b0248/' target='_blank' className='text-white-100 font-japan mb-1 ml-2'>
                   <img src={linkedin} alt='LinkedIn' className='w-4 h-4 inline-block mr-2' />
                   LinkedIn
                 </a>
