@@ -8,7 +8,7 @@ const Footer = () => {
         <div name='logo-container'  className='flex justify-center mb-3'>
           <img src={kokwan_logo_2} alt={kokwan_logo_2} className='w-12 h-12' /> 
         </div>
-        <p className='font-japan text-xs text-white-100'>© 2023 Ko-Kwan Mognkholtham. All Rights Reserved.</p>
+        <p className='font-japan text-xs text-white-100'>© 2023 Ko-Kwan Mongkholtham. All Rights Reserved.</p>
       </div>
     </footer>
     

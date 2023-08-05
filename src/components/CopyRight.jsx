@@ -9,7 +9,7 @@ const CopyRight = ({ borderColor, textColor }) => {
          <p 
             className={`${textColor ? textColor: 'text-primary'} text-[10px] font-japan tracking-[0.2em] mb-1 breakpoint:text-[14px]`}
          >
-            @Ko-Kwan Mognkholtham
+            @Ko-Kwan Mongkholtham
          </p>
       </div>
    );
