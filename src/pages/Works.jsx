@@ -1,90 +1,116 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Typewriter from '../components/Typewriter';
-import { projects } from '../data';
-import SectionTitle from '../components/SectionTitle'
-import useCheckScreenSize from '../utils/useCheckScreenSize';
-import { up_icon, down_icon } from '../assets/images/WORK';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Typewriter from "../components/Typewriter";
+import { workExperience } from "../data";
+import useCheckScreenSize from "../utils/useCheckScreenSize";
+import SectionTitle from "../components/SectionTitle";
+import { up_icon, down_icon } from "../assets/images/WORK";
 
 const Works = () => {
-  const [activeProject, setActiveProject] = useState(null);
 
-  const handleProjectClick = (index) => {
-    setActiveProject(activeProject === index ? null : index);
-  }
+  const [activeWork, setActiveWork] = useState(null);
+
+  const handleWorkClick = (index) => {
+    setActiveWork(activeWork === index ? null : index);
+  };
 
   return (
-    <section 
-      id='works-section' 
-      className='relative bg-background overflow-hidden min-h-full'
+    <section
+      id="works-section"
+      className="relative bg-background overflow-hidden min-h-full"
     >
-      <div name='inner' className='flex flex-col mx-[5%] pb-[8%] pt-[3%]'>
-         <SectionTitle title='Works' />
-         <div className='mt-6'>
-            {projects.map((project, index) => (
-              <WorkCard
-                key={project.id}
-                project={project}
-                onClick={() => handleProjectClick(index)}
-                isActive={activeProject === index}
-              />
-            ))}  
-         </div>
+      <div name="inner" className="flex flex-col mx-[5%] pb-[20%] pt-[3%]
+        tablet:pb-[9%]
+        breakpoint:pb-[8%]
+        laptop:pb-[6%]
+        desktop:pb-[5%]
+      ">
+        <SectionTitle title="Work Experience" />
+        <div className="mt-6">
+          {workExperience.map((work) => (
+            <WorkCard
+              key={work.id}
+              work={work}
+              onClick={() => handleWorkClick(work.id)}
+              isActive={activeWork === (work.id)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-const AnimatedContent = ({ isActive, project }) => (
+export default Works;
+
+// export const workExperience = [
+//   {
+//     id: 1,
+//     company: "Pecgo",
+//     team: "Developer",
+//     position: "Junior Frontend Developer",
+//     monthPeriod: "Aug - Dec",
+//     yearPeriod: "2023",
+//     description: "",
+//     skills: [
+//       {
+//         name: "react.js",
+//       },
+//       {
+//         name: "next.js",
+//       },
+//       {
+//         name: "react-native",
+//       },
+//       {
+//         name: "tailwind",
+//       },
+//       {
+//         name: "zustand",
+//       },
+//     ],
+//   },
+// ];
+
+
+const AnimatedContent = ({ isActive, work }) => (
   <AnimatePresence>
     {isActive && (
       <motion.div
-        key={project.title}
+        key={work.title}
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: 1, height: "auto" }}
         exit={{ opacity: 0, height: 0 }}
-        transition={{ type: 'spring', damping: 20, stiffness: 100 }}
-      > 
-        <div 
-          onClick={(e) => e.stopPropagation()}
-          name='video-contaienr' 
-          className='flex justify-center'
-        >
-          <video 
-            src={project.video} 
-            alt={project.title} 
-            name="work-video" 
-            className='mt-10 mb-10 laptop:mb-12 w-[80%] tablet:w-[50%] laptop:w-[40%]' 
-            controls
-            poster={project.image}
-          />
-        </div>
-        <div name='developer-container' className='flex-col items-center  space-y-4 mb-5'>
-          <div className='flex justify-center'>
-             <Typewriter text={`「Developed by」 |`} delay={0.1} className='font-japan-bold text-black-100 text-sm text-center mr-3' />
-             <Typewriter text={`${project.developed_by}`} delay={0.1} className='font-japan-bold text-black-100 text-sm text-center' />
-          </div>
-          <div className={`${project.developers ? '' : 'hidden'} flex justify-center`}>
-              {project.developers && project.developers.map((developer, index) => {
-                return (
-                  <Typewriter 
-                    key={developer.name}
-                    text={`${developer.name}${(index === project.developers.length - 1) ? '' : ','}`} 
-                    delay={0.1} 
-                    className={`font-japan-bold text-black-100 text-sm text-center ${(index === project.developers.length - 1) ? '' : 'mr-2'}`}
-                  />
-                );
-              })}
-          </div>
-        </div>
-        <div className='flex flex-col mx-[5%]'>
-          <p name="work-description" className='font-japan text-gray-800 text-sm text-center'>{project.description}</p>
-          <div className="mt-5 flex flex-wrap justify-start tablet:mt-10 tablet:justify-center">
-            {project.tags && project.tags.map((tag) => (
-                <div key={tag.name} className="bg-gray-200 px-1 py-1 mr-2 mb-1 mt-2 rounded-md">
-                    <p className="font-japan text-gray-700 text-xs ">#{tag.name}</p>
+        transition={{ type: "spring", damping: 20, stiffness: 100 }}
+      >
+        <div className="flex flex-col mt-10">
+          <p
+            name="work-description"
+            className="text-sm font-didact leading-6 tracking-wider text-black-100 
+              text-start
+              tablet:text-end 
+            "
+          >
+            {work.description}
+          </p>
+          <div
+            className="mt-5 flex flex-wrap justify-center 
+            tablet:justify-end
+            "
+          >
+            {work.skills &&
+              work.skills.map((skill, index) => (
+                <div
+                  key={index}
+                  className={`bg-gray-200 px-1 py-1 mb-1 mt-2 rounded-md
+                    ${index !== work.skills.length - 1 ? "mr-2" : ""}
+                  `}
+                >
+                  <p className="font-japan text-gray-700 text-xs ">
+                    #{skill.name}
+                  </p>
                 </div>
-            ))}
+              ))}
           </div>
         </div>
       </motion.div>
@@ -92,31 +118,70 @@ const AnimatedContent = ({ isActive, project }) => (
   </AnimatePresence>
 );
 
-const WorkCard = ({ project, onClick, isActive }) => {
-  const isTablet = useCheckScreenSize('tablet');
+const WorkCard = ({ work, onClick, isActive }) => {
   return (
     <>
-      <motion.div 
-        layout 
-        name="work-container" 
+      <motion.div
+        layout
+        name="work-container"
         onClick={onClick}
-        className='flex flex-col items-center tablet:flex-row tablet:justify-between tablet:items-start tablet:mx-[5%] overflow-auto'
+        className="flex flex-col items-center tablet:flex-row tablet:justify-between tablet:items-start tablet:mx-[5%] overflow-auto"
       >
-        <Typewriter className='mb-10 tablet:mt-4 font-japan-bold text-sm breakpoint:text-md laptop:text-lg' text={`「${project.label}」`} delay={0.1} />
-        <h3 className='font-vanilla text-primary text-6xl '>{project.name}</h3>
-        {!isTablet && <AnimatedContent isActive={isActive} project={project} />}
+        <div
+          className="flex justify-center items-center 
+          w-24 h-24 mobile:w-24 mobile:h-24 smallMobile:w-20 smallMobile:h-20 spinY"
+        >
+          <img
+            src={work.logo}
+            alt="Work logo"
+            className="object-cover w-12 h-12 
+              tablet:w-16 tablet:h-16
+              breakpoint:w-20 breakpoint:h-20
+              laptop:w-24 laptop:h-24
+            "
+          />
+        </div>
+
+        <div
+          className="flex flex-col justify-center items-center
+          tablet:items-end tablet:justify-end tablet:w-[70%]
+          laptop:w-[75%]
+          "
+        >
+          <p
+            className="text-gray-500 text-xs font-japan
+            laptop:text-sm
+          "
+          >
+            {work.period}
+          </p>
+          <Typewriter
+            className="mt-1  font-japan-bold text-sm breakpoint:text-md laptop:text-lg
+            "
+            text={`${work.position} at ${work.company}`}
+            delay={0.1}
+          />
+
+          {<AnimatedContent isActive={isActive} work={work} />}
+          <div
+            name="icon-container"
+            className="flex justify-center mt-8 tablet:justify-end
+              breakpoint:mt-10
+              desktop:mt-8
+            "
+            onClick={(e) => {
+              e.stopPropagation();
+              onClick();
+            }}
+          >
+            <img
+              src={isActive ? up_icon : down_icon}
+              alt={isActive ? "Up Icon" : "Down Icon"}
+              className="w-6 h-6 "
+            />
+          </div>
+        </div>
       </motion.div>
-      {isTablet && <AnimatedContent isActive={isActive} project={project} />}
-      <div 
-        name='icon-container' 
-        className='flex justify-center mt-6 tablet:justify-end tablet:mr-[5%]' 
-        onClick={(e) => {e.stopPropagation(); onClick();}}
-      >
-        <img src={isActive ? up_icon : down_icon} alt={isActive ? 'Up Icon' : 'Down Icon'} className='w-6 h-6 ' />
-      </div>
-      <hr className='mt-6 mb-12 tablet:mb-20 pencil-style'/>
     </>
   );
 };
- 
-export default Works;

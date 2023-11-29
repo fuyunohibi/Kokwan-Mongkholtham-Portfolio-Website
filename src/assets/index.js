@@ -11,10 +11,13 @@ import git from "./tech/git.png";
 import neovim from "./tech/neovim.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
+import nextjs from "./tech/nextjs.svg";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
+import gitkraken from "./tech/gitkraken.svg";
+import zustand from "./tech/zustand.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
@@ -23,6 +26,9 @@ import leftArrow from "./icons/left-arrow.png";
 import rightArrow from "./icons/right-arrow.png";
 import close from "./icons/close.png";
 import menu from "./icons/menu.png";
+import pecgoLogo from "./images/WORK/pecgoLogo.svg";
+import framerMotion from "./tech/framerMotion.png";
+
 
 
 export {
@@ -42,6 +48,10 @@ export {
   mongodb,
   nodejs,
   reactjs,
+  nextjs,
+  zustand,
+  framerMotion,
+  gitkraken,
   redux,
   tailwind,
   typescript,
@@ -51,4 +61,5 @@ export {
   rightArrow,
   close,
   menu,
+  pecgoLogo,
 };

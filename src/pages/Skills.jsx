@@ -18,7 +18,7 @@ const Skills = () => (
   </section>
 );
 
-const SkillsContainer = ({title, skills, icon}) => (
+const SkillsContainer = ({ title, skills, icon }) => (
   <motion.div 
     className="flex flex-wrap gap-7 pb-10"
     variants={containerVariants}
@@ -38,7 +38,7 @@ const SkillCard = ({ title, skills, icon }) => (
   </div>
 );
 
-const SkillsGrid = ({skills}) => (
+const SkillsGrid = ({ skills }) => (
   <motion.div 
     className={`tablet:-mt-8 desktop:-mt-12 grid grid-cols-3 tablet:grid-cols-4 laptop:grid-cols-5 desktop:grid-cols-6 gap-5 px-3 `}
     variants={itemVariants}
@@ -68,7 +68,7 @@ const SkillItem = ({ skill }) => (
           <div className='w-24 h-24 mobile:w-32 mobile:h-32 smallMobile:w-20 smallMobile:h-20 flex justify-center items-center spinY'>
             <img
               src={skill.icon}
-              alt="skill_image"
+              alt="Skill image"
               className="w-12 h-12 object-cover"
             />
           </div>

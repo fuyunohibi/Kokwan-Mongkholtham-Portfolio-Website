@@ -1,20 +1,29 @@
-import React, { useState,useEffect, useRef } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import useCheckScreenSize from '../utils/useCheckScreenSize';
-import { MainVisual, Introduction, About, Skills, Works, Contact } from '../pages';
-import CopyRight from '../components/CopyRight';
-import Footer from '../components/Footer';
+import React, { useState, useEffect, useRef } from "react";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import useCheckScreenSize from "../utils/useCheckScreenSize";
+import {
+  MainVisual,
+  Introduction,
+  About,
+  Skills,
+  Works,
+  Projects,
+  Contact,
+} from "../pages";
+import CopyRight from "../components/CopyRight";
+import Footer from "../components/Footer";
 
 const Main = () => {
-  const isBreakpoint = useCheckScreenSize('breakpoint');
-  const [activeSection, setActiveSection] = useState('Home');
+  const isBreakpoint = useCheckScreenSize("breakpoint");
+  const [activeSection, setActiveSection] = useState("Home");
 
   const mainVisualRef = useRef(null);
   const introductionRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const worksRef = useRef(null);
+  const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
   useEffect(() => {
@@ -23,72 +32,152 @@ const Main = () => {
 
       if (isBreakpoint) {
         if (scrollPos === 0) {
-          setActiveSection('Home');
-        } else if (scrollPos >= introductionRef.current.offsetTop - 130 && scrollPos < introductionRef.current.offsetTop + introductionRef.current.offsetHeight) {
-          setActiveSection('Introduction');
-        } else if (aboutRef.current && scrollPos >= aboutRef.current.offsetTop && scrollPos < aboutRef.current.offsetTop + aboutRef.current.offsetHeight) {
-          setActiveSection('About');
-        } else if (skillsRef.current && scrollPos >= skillsRef.current.offsetTop  && scrollPos < skillsRef.current.offsetTop + skillsRef.current.offsetHeight) {
-          setActiveSection('Skills');
-        } else if (worksRef.current && scrollPos >= worksRef.current.offsetTop && scrollPos < worksRef.current.offsetTop + worksRef.current.offsetHeight) {
-          setActiveSection('Works');
-        } else if (contactRef.current && scrollPos >= contactRef.current.offsetTop && scrollPos < contactRef.current.offsetTop + contactRef.current.offsetHeight) {
-          setActiveSection('Contact');
+          setActiveSection("Home");
+        } else if (
+          scrollPos >= introductionRef.current.offsetTop - 130 &&
+          scrollPos <
+            introductionRef.current.offsetTop +
+              introductionRef.current.offsetHeight
+        ) {
+          setActiveSection("Introduction");
+        } else if (
+          aboutRef.current &&
+          scrollPos >= aboutRef.current.offsetTop &&
+          scrollPos < aboutRef.current.offsetTop + aboutRef.current.offsetHeight
+        ) {
+          setActiveSection("About");
+        } else if (
+          worksRef.current &&
+          scrollPos >= worksRef.current.offsetTop &&
+          scrollPos < worksRef.current.offsetTop + worksRef.current.offsetHeight
+        ) {
+          setActiveSection("Works");
+        } else if (
+          skillsRef.current &&
+          scrollPos >= skillsRef.current.offsetTop &&
+          scrollPos <
+            skillsRef.current.offsetTop + skillsRef.current.offsetHeight
+        ) {
+          setActiveSection("Skills");
+        } else if (
+          projectsRef.current &&
+          scrollPos >= projectsRef.current.offsetTop &&
+          scrollPos <
+            projectsRef.current.offsetTop + projectsRef.current.offsetHeight
+        ) {
+          setActiveSection("Projects");
+        } else if (
+          contactRef.current &&
+          scrollPos >= contactRef.current.offsetTop &&
+          scrollPos <
+            contactRef.current.offsetTop + contactRef.current.offsetHeight
+        ) {
+          setActiveSection("Contact");
         }
       } else {
         // Set the activeSection based on scroll position
-        if (mainVisualRef.current && scrollPos >= mainVisualRef.current.offsetTop && scrollPos < mainVisualRef.current.offsetTop + mainVisualRef.current.offsetHeight) {
-          setActiveSection('Home');
-        } else if (introductionRef.current  && scrollPos >= introductionRef.current.offsetTop && scrollPos < introductionRef.current.offsetTop + introductionRef.current.offsetHeight) {
-          setActiveSection('Introduction');
-        } else if (aboutRef.current && scrollPos >= aboutRef.current.offsetTop && scrollPos < aboutRef.current.offsetTop + aboutRef.current.offsetHeight) {
-          setActiveSection('About');
-        } else if (skillsRef.current && scrollPos >= skillsRef.current.offsetTop && scrollPos < skillsRef.current.offsetTop + skillsRef.current.offsetHeight) {
-          setActiveSection('Skills');
-        } else if (worksRef.current && scrollPos >= worksRef.current.offsetTop && scrollPos < worksRef.current.offsetTop + worksRef.current.offsetHeight) {
-          setActiveSection('Works');
-        } else if (contactRef.current && scrollPos >= contactRef.current.offsetTop && scrollPos < contactRef.current.offsetTop + contactRef.current.offsetHeight) {
-          setActiveSection('Contact');
-        } 
-        
+        if (
+          mainVisualRef.current &&
+          scrollPos >= mainVisualRef.current.offsetTop &&
+          scrollPos <
+            mainVisualRef.current.offsetTop + mainVisualRef.current.offsetHeight
+        ) {
+          setActiveSection("Home");
+        } else if (
+          introductionRef.current &&
+          scrollPos >= introductionRef.current.offsetTop &&
+          scrollPos <
+            introductionRef.current.offsetTop +
+              introductionRef.current.offsetHeight
+        ) {
+          setActiveSection("Introduction");
+        } else if (
+          aboutRef.current &&
+          scrollPos >= aboutRef.current.offsetTop &&
+          scrollPos < aboutRef.current.offsetTop + aboutRef.current.offsetHeight
+        ) {
+          setActiveSection("About");
+        } else if (
+          worksRef.current &&
+          scrollPos >= worksRef.current.offsetTop &&
+          scrollPos < worksRef.current.offsetTop + worksRef.current.offsetHeight
+        ) {
+          setActiveSection("Works");
+        } else if (
+          skillsRef.current &&
+          scrollPos >= skillsRef.current.offsetTop &&
+          scrollPos <
+            skillsRef.current.offsetTop + skillsRef.current.offsetHeight
+        ) {
+          setActiveSection("Skills");
+        } else if (
+          projectsRef.current &&
+          scrollPos >= projectsRef.current.offsetTop &&
+          scrollPos <
+            projectsRef.current.offsetTop + projectsRef.current.offsetHeight
+        ) {
+          setActiveSection("Projects");
+        } else if (
+          contactRef.current &&
+          scrollPos >= contactRef.current.offsetTop &&
+          scrollPos <
+            contactRef.current.offsetTop + contactRef.current.offsetHeight
+        ) {
+          setActiveSection("Contact");
+        }
       }
     };
 
     console.log("Active Section:", activeSection);
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isBreakpoint, activeSection]);
 
-  let textColor, borderColor;   
-  switch(activeSection) {
-    case 'Contact':
-      textColor = 'text-accent';
-      borderColor = 'border-accent'
+  let textColor, borderColor;
+  switch (activeSection) {
+    case "Contact":
+      textColor = "text-accent";
+      borderColor = "border-accent";
       break;
     default:
-      textColor = 'text-primary';
-      borderColor = 'border-primary'
+      textColor = "text-primary";
+      borderColor = "border-primary";
   }
 
   return (
-   <BrowserRouter>
+    <BrowserRouter>
       <main>
-          <Navbar activeSection={activeSection} />
-          <CopyRight textColor={textColor} borderColor={borderColor}/>
-          <div ref={mainVisualRef}>
-            <MainVisual introductionRef={introductionRef} />
+        <Navbar activeSection={activeSection} />
+        <CopyRight textColor={textColor} borderColor={borderColor} />
+        <div ref={mainVisualRef}>
+          <MainVisual introductionRef={introductionRef} />
+        </div>
+        {!isBreakpoint && (
+          <div ref={introductionRef}>
+            <Introduction />
           </div>
-            {!isBreakpoint && <div ref={introductionRef}><Introduction /></div>}
-          <div ref={aboutRef}><About  /></div>
-          <div ref={skillsRef}><Skills  /></div>
-          <div ref={worksRef}><Works  /></div>
-          <div ref={contactRef}><Contact  /></div>
-          <Footer />
+        )}
+        <div ref={aboutRef}>
+          <About />
+        </div>
+        <div ref={worksRef}>
+          <Works />
+        </div>
+        <div ref={skillsRef}>
+          <Skills />
+        </div>
+        <div ref={projectsRef}>
+          <Projects />
+        </div>
+        <div ref={contactRef}>
+          <Contact />
+        </div>
+        <Footer />
       </main>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

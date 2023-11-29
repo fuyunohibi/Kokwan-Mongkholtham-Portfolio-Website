@@ -50,7 +50,7 @@ const SectionTitle = ({
       initial="hidden"
       whileInView="show"
       variants={containerVariants}
-      className={isTablet ? 'flex justify-start items-center mb-14 mt-6' : 'flex justify-center items-center mb-14 mt-6'}
+      className={isTablet ? 'flex justify-start items-center mb-14 mt-6' : 'text-center flex justify-center items-center mb-14 mt-6'}
       style={{ originX: isTablet ? 0 : '50%' }}
     >
       {!isTablet && (

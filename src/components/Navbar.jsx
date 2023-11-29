@@ -36,23 +36,23 @@ const Navbar = ({ activeSection }) => {
 
   return (
     <>
-      <nav 
-        className='glass-navbar shadow-md p-4 px-8 flex justify-between items-center fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 
-        rounded-[2rem] w-[90vw] mobile:w-[25rem] h-[3.5rem]
-        tablet:w-[30rem] tablet:h-16 laptop:top-0 laptop:bottom-auto laptop:rounded-none laptop:rounded-b-[2rem] laptop:w-screen laptop:h-[4.6rem]'
+      <nav
+        className="glass-navbar shadow-md p-4 px-8 flex justify-between items-center fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 
+        rounded-[2rem] w-[90vw] mobile:w-[25rem] h-[3.5rem] 
+        tablet:w-[30rem] tablet:h-16 laptop:top-0 laptop:bottom-auto laptop:rounded-none laptop:rounded-b-[2rem] laptop:w-screen laptop:h-[4.6rem]"
       >
         <Link
           to="/"
           onClick={() => {
-            setActive('Home'); 
+            setActive("Home");
             window.scrollTo(0, 0);
           }}
-          className='text-accent font-vanilla  text-lg mobile:text-xl customHover' 
+          className="text-accent font-vanilla  text-lg mobile:text-xl customHover"
         >
-            Ko-Kwan
+          Ko-Kwan
         </Link>
         <ul className="flex space-x-10">
-          {isLaptop ? ( 
+          {isLaptop ? (
             navLinks.map((nav) => (
               <li key={nav.id}>
                 <a
@@ -60,34 +60,49 @@ const Navbar = ({ activeSection }) => {
                   onClick={() => setActive(nav.name)}
                   className={`font-vanilla text-xl customHover hover:text-accent transition-all duration-300 
                     ${active === nav.name ? "text-accent" : "text-inActive"}
-                  `} >
-                    {nav.name}
+                  `}
+                >
+                  {nav.name}
                 </a>
               </li>
             ))
           ) : (
-            <button onClick={toggleMenu}><img src={menu} alt="menu" className="w-6 h-6 transform transition-transform hover:rotate-90" /></button>
+            <button onClick={toggleMenu}>
+              <img
+                src={menu}
+                alt="menu"
+                className="w-6 h-6 transform transition-transform hover:rotate-90"
+              />
+            </button>
           )}
         </ul>
       </nav>
       {!isLaptop && (
         <BottomSheet show={showMenu}>
-            <ul className="grid grid-cols-3 grid-rows-2 text-center">
-              {navLinks.map((nav) => (
-                <NavItem
-                  key={nav.id}
-                  nav={nav}
-                  active={active}
-                  onClick={() => {
-                    toggleMenu();
-                    setActive(nav.name);
-                  }}
-                />
-              ))}
-            </ul>
-            <div className='absolute bottom-0 right-0 mr-[2rem] mb-2'>
-              <img src={close} alt="close" onClick={toggleMenu} className="w-6 h-6 mx-auto my-3 transition-transform duration-500 ease-in-out transform hover:rotate-180" />
-            </div>
+          <ul
+            className="grid grid-cols-3 text-center 
+            "
+          >
+            {navLinks.map((nav) => (
+              <NavItem
+                key={nav.id}
+                nav={nav}
+                active={active}
+                onClick={() => {
+                  toggleMenu();
+                  setActive(nav.name);
+                }}
+              />
+            ))}
+          </ul>
+          <div className="absolute bottom-0 right-0 mr-[2rem] mb-2">
+            <img
+              src={close}
+              alt="close"
+              onClick={toggleMenu}
+              className="w-6 h-6 mx-auto my-3 transition-transform duration-500 ease-in-out transform hover:rotate-180"
+            />
+          </div>
         </BottomSheet>
       )}
     </>
@@ -99,7 +114,9 @@ const NavItem = ({ nav, active, onClick }) => {
 
   return (
     <li 
-      className='mx-6 my-[0.65rem] relative'
+      className='mx-6 my-[0.65rem] relative
+        tablet:mx-10 tablet:my-[0.7rem]
+      '
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)} 
     >
