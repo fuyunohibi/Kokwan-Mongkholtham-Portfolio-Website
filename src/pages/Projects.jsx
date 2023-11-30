@@ -86,9 +86,10 @@ const AnimatedContent = ({ isActive, project }) => (
             />
           </div>
           <div
-            className={`${
-              project.developers ? "" : "hidden"
-            } flex justify-center`}
+            className={`
+            flex justify-center flex-wrap
+            ${project.developers ? "" : "hidden"} 
+            `}
           >
             {project.developers &&
               project.developers.map((developer, index) => {
@@ -99,9 +100,9 @@ const AnimatedContent = ({ isActive, project }) => (
                       index === project.developers.length - 1 ? "" : ","
                     }`}
                     delay={0.1}
-                    className={`font-japan-bold text-black-100 text-sm text-center ${
-                      index === project.developers.length - 1 ? "" : "mr-2"
-                    }`}
+                    className={`font-japan-bold text-black-100 text-sm text-center 
+                    ${index === project.developers.length - 1 ? "" : "mr-2"}
+                    `}
                   />
                 );
               })}
@@ -114,7 +115,7 @@ const AnimatedContent = ({ isActive, project }) => (
           >
             {project.description}
           </p>
-          <div className="mt-5 flex flex-wrap justify-start tablet:mt-10 tablet:justify-center">
+          <div className="mt-5 flex flex-wrap justify-center tablet:mt-10">
             {project.tags &&
               project.tags.map((tag, index) => (
                 <div
@@ -135,8 +136,23 @@ const AnimatedContent = ({ isActive, project }) => (
   </AnimatePresence>
 );
 
+const getModifiedProjectName = (name, isTablet) => {
+  if (name === "MeowXMonster") {
+    return isTablet ? "MeowXMonster" : "Meow\nX\nMonster";
+  }
+  if (name === "SE-Connect") {
+    return isTablet ? "SE-Connect" : "SE\nConnect";
+  }
+  if (name === "Forgetme-Not") {
+    return isTablet ? "Forgetme-Not" : "Forgetme\nNot";
+  }
+  return name;
+}
+
 const ProjectCard = ({ project, onClick, isActive }) => {
   const isTablet = useCheckScreenSize("tablet");
+  const modifiedProjectName = getModifiedProjectName(project.name, isTablet);
+
   return (
     <>
       <motion.div
@@ -150,7 +166,15 @@ const ProjectCard = ({ project, onClick, isActive }) => {
           text={`「${project.label}」`}
           delay={0.1}
         />
-        <h3 className="font-vanilla text-primary text-6xl ">{project.name}</h3>
+        <h3
+          className={`font-vanilla text-primary text-6xl ${
+            project.name === "MeowXMonster" || project.name === "SE-Connect" || project.name === "Forgetme-Not"
+              ? "whitespace-pre-line text-center"
+              : ""
+          }`}
+        >
+          {modifiedProjectName}
+        </h3>
         {!isTablet && <AnimatedContent isActive={isActive} project={project} />}
       </motion.div>
       {isTablet && <AnimatedContent isActive={isActive} project={project} />}
