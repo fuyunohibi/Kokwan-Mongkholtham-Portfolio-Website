@@ -95,7 +95,7 @@ const AnimatedContent = ({ isActive, work }) => (
           <p
             name="work-description"
             className="text-sm font-didact leading-6 tracking-wider text-black-100 
-              text-start
+              text-center
               tablet:text-end 
             "
           >
