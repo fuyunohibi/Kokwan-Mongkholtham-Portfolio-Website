@@ -43,6 +43,10 @@ import {
 } from "../assets/images/NAVBAR";
 
 import {
+  meowXMonster_image,
+  meowXMonster_demo,
+  SE_connect_image,
+  SE_connect_demo,
   florave_image,
   forgetmenot_image,
   narcissus_image,
@@ -297,8 +301,8 @@ export const projects = [
         name: "zodb",
       },
     ],
-    image: narcissus_image,
-    video: narcissus_demo,
+    image: SE_connect_image,
+    video: SE_connect_demo,
     source_code_link: "https://github.com/fuyunohibi/SE-Connect",
   },
   {
@@ -339,8 +343,8 @@ export const projects = [
         name: "raylib",
       },
     ],
-    image: narcissus_image,
-    video: narcissus_demo,
+    image: meowXMonster_image,
+    video: meowXMonster_demo,
     source_code_link: "https://github.com/fuyunohibi/MeowXMonster",
   },
   {

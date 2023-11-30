@@ -5,6 +5,8 @@ import { projects } from "../data";
 import SectionTitle from "../components/SectionTitle";
 import useCheckScreenSize from "../utils/useCheckScreenSize";
 import { up_icon, down_icon } from "../assets/images/WORK";
+import MetaTag from "../components/MetaTag";
+import { HelmetProvider } from "react-helmet-async";
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
@@ -14,24 +16,30 @@ const Projects = () => {
   };
 
   return (
-    <section
-      id="projects-section"
-      className="relative bg-background overflow-hidden min-h-full"
-    >
-      <div name="inner" className="flex flex-col mx-[5%] pb-[8%] pt-[3%]">
-        <SectionTitle title="Projects" />
-        <div className="mt-6">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onClick={() => handleProjectClick(index)}
-              isActive={activeProject === index}
-            />
-          ))}
+    <HelmetProvider>
+      <section
+        id="projects-section"
+        className="relative bg-background overflow-hidden min-h-full"
+      >
+        <MetaTag
+          title="Projects Page - Kokwan Portfolio Website"
+          description="Welcome to my portfolio website."
+        />
+        <div name="inner" className="flex flex-col mx-[5%] pb-[8%] pt-[3%]">
+          <SectionTitle title="Projects" />
+          <div className="mt-6">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                onClick={() => handleProjectClick(index)}
+                isActive={activeProject === index}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </HelmetProvider>
   );
 };
 

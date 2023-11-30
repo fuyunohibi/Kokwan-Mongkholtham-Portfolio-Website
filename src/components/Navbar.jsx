@@ -51,9 +51,9 @@ const Navbar = ({ activeSection }) => {
         >
           Ko-Kwan
         </Link>
-        <ul className="flex space-x-10">
-          {isLaptop ? (
-            navLinks.map((nav) => (
+        {isLaptop ? (
+          <ul className='flex space-x-10'>
+            {navLinks.map((nav) => (
               <li key={nav.id}>
                 <a
                   href={`#${nav.id}`}
@@ -65,17 +65,17 @@ const Navbar = ({ activeSection }) => {
                   {nav.name}
                 </a>
               </li>
-            ))
-          ) : (
-            <button onClick={toggleMenu}>
+            ))}
+          </ul>
+        ) : (
+          <button onClick={toggleMenu}>
               <img
                 src={menu}
-                alt="menu"
+                alt="menu icon"
                 className="w-6 h-6 transform transition-transform hover:rotate-90"
               />
             </button>
-          )}
-        </ul>
+        )}
       </nav>
       {!isLaptop && (
         <BottomSheet show={showMenu}>
@@ -98,7 +98,7 @@ const Navbar = ({ activeSection }) => {
           <div className="absolute bottom-0 right-0 mr-[2rem] mb-2">
             <img
               src={close}
-              alt="close"
+              alt="close icon"
               onClick={toggleMenu}
               className="w-6 h-6 mx-auto my-3 transition-transform duration-500 ease-in-out transform hover:rotate-180"
             />
@@ -113,30 +113,34 @@ const NavItem = ({ nav, active, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <li 
-      className='mx-6 my-[0.65rem] relative
+    <li
+      className="mx-6 my-[0.65rem] relative
         tablet:mx-10 tablet:my-[0.7rem]
-      '
+      "
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)} 
+      onMouseLeave={() => setIsHovered(false)}
     >
       <a
         onClick={onClick}
         href={`#${nav.id}`}
         className={`font-vanilla text-sm hover:text-accent transition-all duration-300 
             ${active === nav.name ? "text-accent" : "text-inActive"}
-        `} 
+        `}
       >
-        <div className='flex justify-center'>
-          <img 
+        <div className="flex justify-center">
+          <img
             src={nav.inActiveIcon}
-            alt={nav.name}  
-            className={`absolute w-6 h-6 mx-auto my-2 transition-opacity duration-300 ${active === nav.name || isHovered ? 'opacity-0' : 'opacity-100'}`}
+            alt={nav.name + " icon"}
+            className={`absolute w-6 h-6 mx-auto my-2 transition-opacity duration-300 ${
+              active === nav.name || isHovered ? "opacity-0" : "opacity-100"
+            }`}
           />
-          <img 
+          <img
             src={nav.activeIcon}
-            alt={nav.name}  
-            className={`w-6 h-6 mx-auto my-2 transition-opacity duration-300 ${active === nav.name || isHovered ? 'opacity-100' : 'opacity-0'}`}
+            alt={nav.name + " icon"}
+            className={`w-6 h-6 mx-auto my-2 transition-opacity duration-300 ${
+              active === nav.name || isHovered ? "opacity-100" : "opacity-0"
+            }`}
           />
         </div>
         {nav.name}

@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Typewriter from "../components/Typewriter";
 import { workExperience } from "../data";
-import useCheckScreenSize from "../utils/useCheckScreenSize";
 import SectionTitle from "../components/SectionTitle";
 import { up_icon, down_icon } from "../assets/images/WORK";
+import MetaTag from "../components/MetaTag";
+import { HelmetProvider } from "react-helmet-async";
 
 const Works = () => {
-
   const [activeWork, setActiveWork] = useState(null);
 
   const handleWorkClick = (index) => {
@@ -15,29 +15,38 @@ const Works = () => {
   };
 
   return (
-    <section
-      id="works-section"
-      className="relative bg-background overflow-hidden min-h-full"
-    >
-      <div name="inner" className="flex flex-col mx-[5%] pb-[20%] pt-[3%]
+    <HelmetProvider>
+      <section
+        id="works-section"
+        className="relative bg-background overflow-hidden min-h-full"
+      >
+        <MetaTag
+          title="Works Page - Kokwan Portfolio Website"
+          description="Welcome to my portfolio website."
+        />
+        <div
+          name="inner"
+          className="flex flex-col mx-[5%] pb-[20%] pt-[3%]
         tablet:pb-[9%]
         breakpoint:pb-[8%]
         laptop:pb-[6%]
         desktop:pb-[5%]
-      ">
-        <SectionTitle title="Work Experience" />
-        <div className="mt-6">
-          {workExperience.map((work) => (
-            <WorkCard
-              key={work.id}
-              work={work}
-              onClick={() => handleWorkClick(work.id)}
-              isActive={activeWork === (work.id)}
-            />
-          ))}
+      "
+        >
+          <SectionTitle title="Work Experience" />
+          <div className="mt-6">
+            {workExperience.map((work) => (
+              <WorkCard
+                key={work.id}
+                work={work}
+                onClick={() => handleWorkClick(work.id)}
+                isActive={activeWork === work.id}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </HelmetProvider>
   );
 };
 
@@ -71,7 +80,6 @@ export default Works;
 //     ],
 //   },
 // ];
-
 
 const AnimatedContent = ({ isActive, work }) => (
   <AnimatePresence>
@@ -149,9 +157,8 @@ const WorkCard = ({ work, onClick, isActive }) => {
           "
         >
           <p
-            className="text-gray-500 text-xs font-japan
-            laptop:text-sm
-          "
+            className="text-gray-600 text-xs font-japan
+            laptop:text-sm"
           >
             {work.period}
           </p>
