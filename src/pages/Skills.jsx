@@ -107,7 +107,7 @@ const SkillItem = ({ skill }) => (
             <img
               src={skill.icon}
               alt="Skill image"
-              className={`w-12 h-12 object-cover ${skill.title === "SwiftUI" ? 'scale-[134%]' : ''}`}
+              className={`w-12 h-12 object-cover ${skill.title === "SwiftUI" ? 'scale-[135%]' : ''}`}
             />
           </div>
         </RandomGradientBlock>
