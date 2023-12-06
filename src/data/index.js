@@ -23,6 +23,10 @@ import {
   java,
   mysql,
   pecgoLogo,
+  swift,
+  swiftui,
+  flutter,
+  dart,
 } from "../assets";
 
 import {
@@ -109,7 +113,7 @@ export const skills = {
     // Advanced skills
     {
       title: "React.js",
-      title_two: "React Native",
+      // title_two: "React Native",
       expertise: "advanced",
       icon: reactjs,
     },
@@ -119,7 +123,7 @@ export const skills = {
       icon: nextjs,
     },
     {
-      title: "Tailwind",
+      title: "Tailwind CSS",
       expertise: "advanced",
       icon: tailwind,
     },
@@ -130,9 +134,14 @@ export const skills = {
     },
     // Intermediate skills
     {
+      title: "Redux",
+      expertise: "intermediate",
+      icon: redux,
+    },
+    {
       title: "Framer Motion",
       expertise: "intermediate",
-      icon: framerMotion, 
+      icon: framerMotion,
     },
     {
       title: "HTML",
@@ -155,14 +164,39 @@ export const skills = {
       icon: typescript,
     },
     {
-      title: "Redux",
-      expertise: "intermediate",
-      icon: redux,
-    },
-    {
       title: "Three.js",
       expertise: "basic",
       icon: threejs,
+    },
+  ],
+  Mobile: [
+    // Advanced skills
+    {
+      title: "React Native",
+      expertise: "advanced",
+      icon: reactjs,
+    },
+    // Intermediate skills
+    {
+      title: "Swift",
+      expertise: "intermediate",
+      icon: swift,
+    },
+    {
+      title: "SwiftUI",
+      expertise: "intermediate",
+      icon: swiftui,
+    },
+    // Basic skills
+    {
+      title: "Flutter",
+      expertise: "basic",
+      icon: flutter,
+    },
+    {
+      title: "Dart",
+      expertise: "basic",
+      icon: dart,
     },
   ],
   BackEnd: [
@@ -254,10 +288,10 @@ export const workExperience = [
         name: "next.js",
       },
       {
-        name: "react-native",
+        name: "react native",
       },
       {
-        name: "tailwind",
+        name: "tailwind css",
       },
       {
         name: "zustand",
@@ -291,7 +325,7 @@ export const projects = [
         name: "react.js",
       },
       {
-        name: "tailwind",
+        name: "tailwind css",
       },
       {
         name: "zustand",
@@ -372,7 +406,7 @@ export const projects = [
         name: "react.js",
       },
       {
-        name: "tailwind",
+        name: "tailwind css",
       },
       {
         name: "nodejs",
@@ -395,7 +429,7 @@ export const projects = [
       "Floravé is a testament to the elegance and fluidity of React Native. It's an experimental app that showcases the beauty of animations in a mobile environment. Inspired by the graceful movements of flowers in a breeze, Floravé allows users to explore images through a unique sliding animation that mimics the delicate dance of petals. This project was a journey into the depths of React Native, focusing on creating an experience that is both minimalistic and captivating, much like the subtle allure of a blooming flower.",
     tags: [
       {
-        name: "react-native",
+        name: "react native",
       },
       {
         name: "redux",
@@ -414,7 +448,7 @@ export const projects = [
       "Forgetme-Not, a part of the flower-inspired app suite alongside Floravé, is a minimalist yet powerful reminder application. Echoing the delicate and memorable presence of its namesake flower, this app ensures that your important tasks are never forgotten. It provides a user-friendly experience with color palette customization options, mirroring the vibrant variety found in Forget-Me-Not blooms. Developed with React Native and Redux, Forgetme-Not is more than just an organizer; it's a harmonious blend of nature's inspiration and technological convenience, designed to bring efficiency and beauty into daily task management.",
     tags: [
       {
-        name: "react-native",
+        name: "react native",
       },
       {
         name: "redux",

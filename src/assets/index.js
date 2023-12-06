@@ -28,7 +28,10 @@ import close from "./icons/close.png";
 import menu from "./icons/menu.png";
 import pecgoLogo from "./images/WORK/pecgoLogo.svg";
 import framerMotion from "./tech/framerMotion.png";
-
+import swift from "./tech/swift.svg";
+import swiftui from "./tech/swiftui.svg";
+import flutter from "./tech/flutter.svg";
+import dart from "./tech/dart.png";
 
 
 export {
@@ -62,4 +65,8 @@ export {
   close,
   menu,
   pecgoLogo,
+  swift,
+  swiftui,
+  flutter,
+  dart,
 };

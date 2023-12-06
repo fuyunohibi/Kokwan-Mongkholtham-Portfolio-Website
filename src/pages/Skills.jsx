@@ -2,6 +2,7 @@ import React from "react";
 import RandomGradientBlock from "../components/randomGradientBlock";
 import {
   frontend_icon,
+  mobile_icon,
   backend_icon,
   tools_icon,
 } from "../assets/images/SKILLS";
@@ -23,12 +24,17 @@ const Skills = () => (
       <div name="inner" className="flex flex-col mx-[5%]">
         <SectionTitle title="Skills" />
         <SkillsContainer
-          title="Front End Development"
+          title="Frontend Development"
           skills={skills.FrontEnd}
           icon={frontend_icon}
         />
         <SkillsContainer
-          title="Back End Development"
+          title="Mobile Development"
+          skills={skills.Mobile}
+          icon={mobile_icon}
+        />
+        <SkillsContainer
+          title="Backend Development"
           skills={skills.BackEnd}
           icon={backend_icon}
         />
@@ -101,7 +107,7 @@ const SkillItem = ({ skill }) => (
             <img
               src={skill.icon}
               alt="Skill image"
-              className="w-12 h-12 object-cover"
+              className={`w-12 h-12 object-cover ${skill.title === "SwiftUI" ? 'scale-[130%]' : ''}`}
             />
           </div>
         </RandomGradientBlock>
