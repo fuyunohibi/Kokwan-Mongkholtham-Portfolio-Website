@@ -294,9 +294,11 @@ export const projects = [
         name: "tailwind",
       },
       {
+        name: "zustand",
+      },
+      {
         name: "fastapi",
       },
-
       {
         name: "zodb",
       },
@@ -394,6 +396,9 @@ export const projects = [
     tags: [
       {
         name: "react-native",
+      },
+      {
+        name: "redux",
       },
     ],
     image: florave_image,
