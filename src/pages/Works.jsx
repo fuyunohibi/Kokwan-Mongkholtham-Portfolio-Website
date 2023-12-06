@@ -21,8 +21,8 @@ const Works = () => {
         className="relative bg-background overflow-hidden min-h-full"
       >
         <MetaTag
-          title="Works Page - Kokwan Portfolio Website"
-          description="Welcome to my portfolio website."
+          title="Kokwan.M - Creative Designer & Developer | Portfolio Showcase"
+          description="Explore Kokwan.M's Portfolio Website featuring a diverse range of innovative design and development projects. Discover unique creations that blend creativity with technology."
         />
         <div
           name="inner"

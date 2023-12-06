@@ -78,8 +78,8 @@ const MainVisual = ({ introductionRef }) => {
     <HelmetProvider>
       <section id="mainVisual-section" className="breakpoint:bg-background">
         <MetaTag
-          title="Homepage - Kokwan Portfolio Website"
-          description="Welcome to my portfolio website."
+          title="Kokwan.M - Creative Designer & Developer | Portfolio Showcase"
+          description="Explore Kokwan.M's Portfolio Website featuring a diverse range of innovative design and development projects. Discover unique creations that blend creativity with technology."
         />
         {isBreakpoint ? (
           <motion.div

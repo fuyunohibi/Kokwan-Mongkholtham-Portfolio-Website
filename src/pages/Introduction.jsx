@@ -11,8 +11,8 @@ const Introduction = () => {
     <HelmetProvider>
       <section id="introduction-section" className="bg-dark-background">
         <MetaTag
-          title="Introduction Page - Kokwan Portfolio Website"
-          description="Welcome to my portfolio website."
+          title="Kokwan.M - Creative Designer & Developer | Portfolio Showcase"
+          description="Explore Kokwan.M's Portfolio Website featuring a diverse range of innovative design and development projects. Discover unique creations that blend creativity with technology."
         />
         <div
           name="inner"
