@@ -16,7 +16,7 @@ import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
-import gitkraken from "./tech/gitkraken.svg";
+import gitkraken from "./tech/gitkraken.webp";
 import zustand from "./tech/zustand.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";

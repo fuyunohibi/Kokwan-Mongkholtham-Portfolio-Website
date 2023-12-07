@@ -127,7 +127,7 @@ export const skills = {
       icon: nextjs,
     },
     {
-      title: "Tailwind CSS",
+      title: "Tailwind",
       expertise: "advanced",
       icon: tailwind,
     },
@@ -204,27 +204,6 @@ export const skills = {
     },
   ],
   BackEnd: [
-    // Intermediate skills
-    {
-      title: "Python",
-      expertise: "intermediate",
-      icon: python,
-    },
-    {
-      title: "C",
-      expertise: "intermediate",
-      icon: c,
-    },
-    {
-      title: "Cpp",
-      expertise: "intermediate",
-      icon: cpp,
-    },
-    {
-      title: "Java",
-      expertise: "intermediate",
-      icon: java,
-    },
     {
       title: "Node.js",
       expertise: "intermediate",
@@ -240,18 +219,38 @@ export const skills = {
       expertise: "intermediate",
       icon: mongodb,
     },
-    // Basic skills
-    {
-      title: "Django",
-      expertise: "basic",
-      icon: django,
-    },
     {
       title: "MySQL",
       expertise: "basic",
       icon: mysql,
     },
+    {
+      title: "Python",
+      expertise: "intermediate",
+      icon: python,
+    },
+    {
+      title: "Java",
+      expertise: "intermediate",
+      icon: java,
+    },
+    {
+      title: "C",
+      expertise: "intermediate",
+      icon: c,
+    },
+    {
+      title: "Cpp",
+      expertise: "intermediate",
+      icon: cpp,
+    },
+    {
+      title: "Django",
+      expertise: "basic",
+      icon: django,
+    },
   ],
+
   Tools: [
     {
       title: "Figma",
@@ -266,7 +265,7 @@ export const skills = {
       icon: git,
     },
     {
-      title: "Gitkraken",
+      title: "GitKraken",
       icon: gitkraken,
     },
     {

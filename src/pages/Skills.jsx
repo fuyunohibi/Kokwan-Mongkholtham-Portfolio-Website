@@ -107,7 +107,8 @@ const SkillItem = ({ skill }) => (
             <img
               src={skill.icon}
               alt="Skill image"
-              className={`w-12 h-12 object-cover ${skill.title === "SwiftUI" ? 'scale-[135%]' : ''}`}
+              className={`w-12 h-12 object-cover ${skill.title === "SwiftUI" ? "scale-[135%]" : ""} 
+              `}
             />
           </div>
         </RandomGradientBlock>
@@ -116,14 +117,16 @@ const SkillItem = ({ skill }) => (
         name="title-expertise-container"
         className="flex justify-start relative -top-3 smallMobile:-top-1 left-[15%] tablet:-top-11 tablet:left-[20%] breakpoint:-top-10 breakpoint:left-[26%] laptop:left-[25%] desktop:-top-16 desktop:left-[28%]"
       >
-        <div
-          name="expertise-container"
-          className="w-2 mr-[0.6rem] mt-[-0.7rem]"
-        >
-          <p className="text-gray-500 text-xs font-japan transform rotate-90">
-            {skill.expertise}
-          </p>
-        </div>
+        {skill.expertise && (
+          <div
+            name="expertise-container"
+            className="w-2 mr-[0.6rem] mt-[-0.7rem]"
+          >
+            <p className="text-gray-500 text-xs font-japan transform rotate-90">
+              {skill.expertise}
+            </p>
+          </div>
+        )}
         {skill.title_two ? (
           <div name="skills-container" className="flex gap-2 z-10">
             <SplitText text={skill.title} />
