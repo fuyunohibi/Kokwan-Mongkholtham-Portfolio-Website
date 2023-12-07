@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: theme => ({
-        'contact-background': "url('./src/assets/images/CONTACT/my_background.jpg')",
-      }),
       screens: {
         'smallMobile' : { 'max' : '350px' },
         'mobile' : '496px',

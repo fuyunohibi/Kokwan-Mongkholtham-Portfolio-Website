@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import useCheckScreenSize from "../utils/useCheckScreenSize";
-import my_image from "../assets/images/MAIN/my_image.jpg";
-import my_image2 from "../assets/images/MAIN/my_image2.jpg";
+import my_image from "../assets/images/MAIN/my_image.webp";
+import my_image_2 from "../assets/images/MAIN/my_image_2.webp";
 import Introduction from "./Introduction";
 import Typewriter from "../components/Typewriter";
 import MetaTag from "../components/MetaTag";
@@ -108,8 +108,8 @@ const MainVisual = ({ introductionRef }) => {
               </div>
               <div name="img-right" className="w-[75%]">
                 <img
-                  src={my_image2}
-                  alt="my image2"
+                  src={my_image_2}
+                  alt="My background Image"
                   className="max-w-[100%] h-auto"
                 />
               </div>
@@ -118,7 +118,7 @@ const MainVisual = ({ introductionRef }) => {
               <div name="img-left" className="w-[40%] mt-[-20%]">
                 <img
                   src={my_image}
-                  alt="my image"
+                  alt="My Profile Image"
                   className="max-w-[100%] h-full"
                 />
               </div>
