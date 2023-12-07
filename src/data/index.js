@@ -27,6 +27,8 @@ import {
   swiftui,
   flutter,
   dart,
+  expressjs,
+  postman,
 } from "../assets";
 
 import {
@@ -229,6 +231,11 @@ export const skills = {
       icon: nodejs,
     },
     {
+      title: "Express.js",
+      expertise: "intermediate",
+      icon: expressjs,
+    },
+    {
       title: "MongoDB",
       expertise: "intermediate",
       icon: mongodb,
@@ -246,27 +253,25 @@ export const skills = {
     },
   ],
   Tools: [
-    // Advanced skills
-    {
-      title: "Gitkraken",
-      expertise: "advanced",
-      icon: gitkraken,
-    },
     {
       title: "Figma",
-      expertise: "advanced",
       icon: figma,
     },
-    // Intermediate skills
     {
       title: "Neovim",
-      expertise: "intermediate",
       icon: neovim,
     },
     {
       title: "Git",
-      expertise: "intermediate",
       icon: git,
+    },
+    {
+      title: "Gitkraken",
+      icon: gitkraken,
+    },
+    {
+      title: "Postman",
+      icon: postman,
     },
   ],
 };

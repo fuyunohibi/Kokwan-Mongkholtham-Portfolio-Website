@@ -32,6 +32,8 @@ import swift from "./tech/swift.svg";
 import swiftui from "./tech/swiftui.svg";
 import flutter from "./tech/flutter.svg";
 import dart from "./tech/dart.png";
+import expressjs from "./tech/expressjs.webp";
+import postman from "./tech/postman.webp";
 
 
 export {
@@ -69,4 +71,6 @@ export {
   swiftui,
   flutter,
   dart,
+  expressjs,
+  postman,
 };
