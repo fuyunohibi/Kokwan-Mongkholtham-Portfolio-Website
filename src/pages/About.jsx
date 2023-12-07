@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 import SectionTitle from "../components/SectionTitle";
 import useCheckScreenSize from "../utils/useCheckScreenSize";
-import about_image from "../assets/images/ABOUT/about_image.jpg";
+import about_image from "../assets/images/ABOUT/about_image.webp";
 import Typewriter from "../components/Typewriter";
 import MetaTag from "../components/MetaTag";
 import { HelmetProvider } from "react-helmet-async";
@@ -65,7 +65,7 @@ const About = () => {
                 <div name="first_img" className="w-[50vw]">
                   <img
                     src={about_image}
-                    alt="about image"
+                    alt="My About Image"
                     className="w-full h-full object-cover"
                   />
                 </div>
