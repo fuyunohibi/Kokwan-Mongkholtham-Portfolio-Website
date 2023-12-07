@@ -10,6 +10,8 @@ import membound_demo from "./videos/membound_demo.mov";
 import SE_connect_demo from "./videos/SE_connect_demo.mov";
 import meowXMonster_image from "./images/meowXMonster_image.jpg";
 import meowXMonster_demo from "./videos/meowXMonster_demo.mov";
+import blossom_balance_image from "./images/blossom_balance_image.webp";
+import blossom_balance_demo from "./videos/blossom_balance_demo.mov";
 
 export {
   SE_connect_image,
@@ -24,4 +26,6 @@ export {
   SE_connect_demo,
   meowXMonster_image,
   meowXMonster_demo,
+  blossom_balance_image,
+  blossom_balance_demo,
 };

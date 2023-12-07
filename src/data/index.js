@@ -47,6 +47,8 @@ import {
 } from "../assets/images/NAVBAR";
 
 import {
+  blossom_balance_image,
+  blossom_balance_demo,
   meowXMonster_image,
   meowXMonster_demo,
   SE_connect_image,
@@ -303,7 +305,31 @@ export const workExperience = [
 /* PROJECTS DATA */
 export const projects = [
   {
-    id: 1,
+    id: 7,
+    name: "Blossom Balance",
+    label: "Design & Development",
+    developed_by: "Ko-Kwan.M",
+    developers: [
+      {
+        name: "Ko-Kwan.M",
+      },
+    ],
+    description:
+      "Blossom Balance is a tranquil oasis in the world of personal finance management. Developed with the grace and fluidity of Swift and SwiftUI, it gently guides users through their financial journey. The app's interface, reminiscent of a serene garden, blooms with clarity and simplicity. It incorporates elegant graphs to visualize financial trends, making budget tracking feel like a gentle breeze. These visual aids bring a sense of harmony and balance, creating a peaceful and engaging experience. Designed to be as soothing as it is functional, Blossom Balance transforms the task of managing finances into a delightful, enriching pursuit.",
+    tags: [
+      {
+        name: "swift",
+      },
+      {
+        name: "swift ui",
+      },
+    ],
+    image: blossom_balance_image,
+    video: blossom_balance_demo,
+    source_code_link: "https://github.com/",
+  },
+  {
+    id: 6,
     name: "SE-Connect",
     label: "Design & Development",
     developed_by: "Team Mesan-Tech",
@@ -342,7 +368,7 @@ export const projects = [
     source_code_link: "https://github.com/fuyunohibi/SE-Connect",
   },
   {
-    id: 2,
+    id: 5,
     name: "MeowXMonster",
     label: "Game Design & Development",
     developed_by: "Team Computer Architecture",
@@ -384,7 +410,7 @@ export const projects = [
     source_code_link: "https://github.com/fuyunohibi/MeowXMonster",
   },
   {
-    id: 3,
+    id: 4,
     name: "Narcissus",
     label: "Design & Development",
     developed_by: "Team Mesan-Tech",
@@ -421,7 +447,7 @@ export const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    id: 4,
+    id: 3,
     name: "Floravé",
     developed_by: "Ko-Kwan.M",
     label: "Design & Development",
@@ -440,7 +466,7 @@ export const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    id: 5,
+    id: 2,
     name: "Forgetme-Not",
     developed_by: "Ko-Kwan.M",
     label: "Design & Development",
@@ -459,7 +485,7 @@ export const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    id: 6,
+    id: 1,
     name: "Membound",
     developed_by: "Ko-Kwan.M",
     label: "Design & Development",
