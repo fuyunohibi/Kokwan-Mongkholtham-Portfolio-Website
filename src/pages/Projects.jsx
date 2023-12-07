@@ -137,6 +137,9 @@ const AnimatedContent = ({ isActive, project }) => (
 );
 
 const getModifiedProjectName = (name, isTablet) => {
+  if (name === "Blossom Balance") {
+    return isTablet ? "Blossom Balance" : "Blossom\nBalance";
+  }
   if (name === "MeowXMonster") {
     return isTablet ? "MeowXMonster" : "Meow\nX\nMonster";
   }
@@ -168,7 +171,7 @@ const ProjectCard = ({ project, onClick, isActive }) => {
         />
         <h3
           className={`font-vanilla text-primary text-6xl ${
-            project.name === "MeowXMonster" || project.name === "SE-Connect" || project.name === "Forgetme-Not"
+            project.name === "Blossom Balance" || project.name === "MeowXMonster" || project.name === "SE-Connect" || project.name === "Forgetme-Not" 
               ? "whitespace-pre-line text-center"
               : ""
           }`}
