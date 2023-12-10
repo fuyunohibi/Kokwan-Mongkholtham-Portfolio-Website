@@ -52,35 +52,6 @@ const Works = () => {
 
 export default Works;
 
-// export const workExperience = [
-//   {
-//     id: 1,
-//     company: "Pecgo",
-//     team: "Developer",
-//     position: "Junior Frontend Developer",
-//     monthPeriod: "Aug - Dec",
-//     yearPeriod: "2023",
-//     description: "",
-//     skills: [
-//       {
-//         name: "react.js",
-//       },
-//       {
-//         name: "next.js",
-//       },
-//       {
-//         name: "react-native",
-//       },
-//       {
-//         name: "tailwind",
-//       },
-//       {
-//         name: "zustand",
-//       },
-//     ],
-//   },
-// ];
-
 const AnimatedContent = ({ isActive, work }) => (
   <AnimatePresence>
     {isActive && (

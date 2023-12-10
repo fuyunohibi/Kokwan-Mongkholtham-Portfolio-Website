@@ -284,7 +284,7 @@ export const workExperience = [
     period: "Aug 2023 - Dec 2023",
     location: "Bangkok, Thailand",
     description:
-      "During my time as a Junior Frontend Developer at Pecgo, I was part of a dynamic team focused on improving our web applications. My role involved skillfully alternating between React.js and React Native to ensure cohesive and functional application performance. In collaboration with my team, I contributed to developing responsive designs, achieving a seamless and adaptable user experience on various devices. My work with Tailwind CSS and Framer Motion played a significant part in enhancing UI elements with both functionality and visual appeal. One of my collective achievements was elevating Pecgo's SEO score to a perfect 100, a testament to our commitment to writing clean, efficient code and adhering to SEO best practices.",
+      "During my time as a Junior Frontend Developer at Pecgo, I was part of a dynamic team focused on improving our web applications. My role involved skillfully alternating between Next.js and React Native to ensure cohesive and functional application performance. In collaboration with my team, I contributed to developing responsive designs, achieving a seamless and adaptable user experience on various devices. My work with Tailwind CSS and Framer Motion played a significant part in enhancing UI elements with both functionality and visual appeal. One of my collective achievements was elevating Pecgo's SEO score to a perfect 100, a testament to our commitment to writing clean, efficient code and adhering to SEO best practices.",
     logo: pecgoLogo,
     skills: [
       {

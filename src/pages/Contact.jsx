@@ -382,7 +382,7 @@ const ContactForm = () => {
               onChange={handleChange}
               id="services"
               rows="4"
-              placeholder="Web Development,&nbsp; Mobile Development,&nbsp; UI/UX Design,&nbsp; etc."
+              placeholder="Web Development,&nbsp; Mobile Development,&nbsp; UX/UI Design,&nbsp; etc."
               className="block w-full mt-2  py-2  text-white bg-transparent placeholder:text-[#666768] placeholder:font-japan focus:outline-none "
             />
           </div>
